@@ -1,0 +1,226 @@
+/* --- Global Styles --- */
+* {
+  font-family: "SF Pro Text", "Inter", "Segoe UI", "NotoSans Nerd Font",
+    sans-serif;
+  font-size: 13px;
+  min-height: 0;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
+/* --- Waybar Container --- */
+#waybar {
+  background: transparent;
+  color: #c6d0f5;
+  margin: 0px;
+  font-weight: 500;
+}
+
+/* --- Left Modules --- */
+#workspaces,
+#custom-uptime,
+#cpu,
+#temperature,
+#memory {
+  background-color: #1a1b26;
+  padding: 0.3rem 0.7rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin: 5px 0px;
+  border-radius: 0;
+  box-shadow: none;
+  min-width: 0;
+  border: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+#cpu {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  margin-left: 7px;
+}
+#temperature {
+  background-color: #1a1b26;
+  color: #c6d0f5;
+}
+#temperature.critical {
+  background-color: #1a1b26;
+  color: #f0932b;
+}
+#memory {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+#workspaces {
+  padding: 2px;
+  margin-left: 7px;
+  margin-right: 5px;
+}
+
+#custom-uptime {
+  margin-right: 5px;
+}
+
+/* Hover effects for left modules */
+#custom-uptime:hover,
+#cpu:hover,
+#memory:hover {
+  background-color: rgb(41, 42, 53);
+}
+
+#workspaces button {
+  color: #babbf1;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  outline: none;
+}
+
+#workspaces button.focused {
+  color: #99d1db;
+  background-color: rgba(153, 209, 219, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2);
+}
+
+#workspaces button.urgent {
+  color: #e78284;
+  background-color: rgba(231, 130, 132, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(231, 130, 132, 0.2);
+}
+
+#workspaces button:hover {
+  background: rgb(41, 42, 53);
+  color: #c6d0f5;
+}
+
+/* --- Center Module --- */
+#clock {
+  background-color: #1a1b26;
+  padding: 0.3rem 0.7rem;
+  margin: 5px 0px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(153, 209, 219, 0.2);
+  min-width: 0;
+  border: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#clock:hover {
+  background-color: rgb(41, 42, 53);
+}
+
+
+/* --- Right Modules --- */
+#bluetooth,
+#pulseaudio,
+#backlight,
+#network,
+#custom-lock,
+#power-profiles-daemon,
+#battery{
+  background-color: #1a1b26;
+  padding: 0.3rem 0.7rem;
+  margin: 5px 0px;
+  border-radius: 0;
+  box-shadow: none;
+  min-width: 0;
+  border: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#bluetooth:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#network:hover,
+#custom-lock:hover,
+#battery:hover {
+  background-color: rgb(41, 42, 53);
+}
+
+#bluetooth {
+  margin-left: 0px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+#battery {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-right: 7px;
+}
+
+/* --- Colors --- */
+#custom-uptime {
+  color: #babbf1;
+}
+#cpu {
+  color: #c6d0f5;
+}
+#clock {
+  color: #c6d0f5;
+  font-weight: 500;
+}
+#pulseaudio {
+  color: #c6d0f5;
+}
+#backlight {
+  color: #c6d0f5;
+}
+#network {
+  color: #c6d0f5;
+}
+#network.disconnected {
+  color: #e78284;
+}
+#custom-lock {
+  color: #babbf1;
+}
+#power-profiles-daemon {
+  padding-right: 15px;
+}
+#power-profiles-daemon.performance {
+  background-color: #1a1b26;
+  color: #c6d0f5;
+}
+#power-profiles-daemon.balanced {
+  background-color: #1a1b26;
+  color: #c6d0f5;
+}
+#power-profiles-daemon.power-saver {
+  background-color: #1a1b26;
+  color: #c6d0f5;
+}
+#bluetooth {
+  color: #888888;
+  font-size: 16px;
+}
+#bluetooth.on {
+  color: #c6d0f5;
+}
+#bluetooth.connected {
+  color: #c6d0f5;
+}
+#battery {
+  color: #99d1db;
+}
+#battery.charging {
+  color: #a6d189;
+}
+#battery.warning:not(.charging) {
+  color: #e78284;
+}
+
+/* --- Tooltip Styles --- */
+tooltip {
+  background-color: #1a1b26;
+  color: #dddddd;
+  padding: 5px 12px;
+  margin: 5px 0px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
