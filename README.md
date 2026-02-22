@@ -1,2 +1,2 @@
 # Dotfiles
-Dotfiles for Hyprland, and Waybar, and Rofi
+A miscellanious assortment of dotfiles and configs I've made
